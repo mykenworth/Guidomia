@@ -11,7 +11,7 @@ class CarsViewModel {
     private var sections: [CarsVCSectionTypes] = []
     
     init() {
-        sections.append(contentsOf: [.header, .image])
+        sections.append(contentsOf: [.header, .image, .car, .car, .car, .car, .car, .car, .car])
     }
     
     func getItems() -> [CarsVCSectionTypes] {

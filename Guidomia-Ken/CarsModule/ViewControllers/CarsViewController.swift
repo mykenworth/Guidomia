@@ -11,6 +11,7 @@ import UIKit
 enum CarsVCSectionTypes {
     case header
     case image
+    case car
 }
 
 class CarsViewController: UIViewController {
@@ -21,7 +22,7 @@ class CarsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let identifiers: [String] =  ["HeaderCell", "ImageCell"]
+        let identifiers: [String] =  ["HeaderCell", "ImageCell", "CarCell"]
         identifiers.forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
                                                  forCellReuseIdentifier: $0) })
         sections = vm.getItems()
@@ -40,7 +41,7 @@ extension CarsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch sections[section] {
-        case .header, .image:
+        case .header, .image, .car:
             return 1
         }
     }
@@ -52,6 +53,9 @@ extension CarsViewController: UITableViewDataSource {
                 return cell
             case .image:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
+                return cell
+            case .car:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
                 return cell
         }
     }
@@ -70,6 +74,8 @@ extension CarsViewController: UITableViewDelegate {
             return 45
         case .image:
             return 250
+        case .car:
+            return 90
         default:
             return UITableView.automaticDimension
         }
