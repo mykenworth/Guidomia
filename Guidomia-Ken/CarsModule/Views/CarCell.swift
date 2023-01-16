@@ -27,7 +27,7 @@ class CarCell: UITableViewCell {
         self.showSeparator()
     }
     
-    func configure(car: Car, selected: Bool) {
+    func configure(car: CarItem, selected: Bool) {
         imageThumb.image = UIImage(named: "\(car.model)") ?? UIImage()
         labelTitle.text = "\(car.make) \(car.model)"
         labelPrice.text = "Price: \(Int((car.marketPrice/1000)))k"

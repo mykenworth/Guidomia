@@ -8,43 +8,55 @@
 import Foundation
 
 class CarsViewModel {
-    private let databaseService: APIService
-    private var sections: [SectionTypes] = []
+    private let databaseService: DatabaseService
+    private var sections: [SectionType] = []
     private var filtersMake: [FilterItem] = []
     private var filtersModel: [FilterItem] = []
-    private var cars: [Car] = []
+    private var cars: [CarItem] = []
     
-    init(databaseService: APIService) {
+    init(databaseService: DatabaseService) {
         self.databaseService = databaseService
+        
+        // default sections
         sections.append(contentsOf: [.header, .image, .filter])
+        
+        // fetch from Database or JSON, whichever is appropriate
+        loadCollection()
     }
     
-    func getFilters(type: FilterType) -> [FilterItem] {
-        switch type {
-        case .model:
-            return self.filtersModel
-        case .make:
-            return self.filtersMake
-        }
-    }
-    
-    func getUnfilteredSections() -> [SectionTypes] {
-        databaseService.getCars { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let cars):
-                self.cars = cars
-                self.sections.append(.car(models: cars))
-                self.filtersMake = cars.map({ FilterItem(text: $0.make, type: .make )})
-                self.filtersModel = cars.map({ FilterItem(text: $0.model, type: .model )})
-            case .failure(let error):
-                debugPrint(error.localizedDescription)
+    private func loadCollection() {
+        // fetch from database first
+        let carsFromDatabase = databaseService.getCarsFromDatabase()
+        
+        // use JSON objects if no database entries found
+        if (carsFromDatabase.isEmpty) {
+            databaseService.getCarsFromJSON { [weak self] result in
+                switch result {
+                case .success(let cars):
+                    self?.setSelections(with: cars)
+                    
+                    // save to database
+                    self?.databaseService.saveCarsToDatabase(cars: cars)
+                case .failure(let error):
+                    debugPrint(error.localizedDescription)
+                }
             }
+        } else {
+            setSelections(with: carsFromDatabase)
         }
+    }
+    
+    // MARK: Getters
+    func getUnfilteredSections() -> [SectionType] {
         return self.sections
     }
     
-    func getFilteredSections(filter: FilterItem) -> [SectionTypes] {
+    func getFilteredSections(filter: FilterItem) -> [SectionType] {
+        if (filter.text.isEmpty) {
+            return self.sections
+        }
+        
+        // establish the filtered car collection
         let filteredCars = self.cars.filter({
             switch filter.type {
             case .make:
@@ -54,15 +66,35 @@ class CarsViewModel {
             }
         })
         
-        for index in 0..<sections.count {
-            switch sections[index] {
+        var filteredSections = self.sections
+        // refresh the sections
+        for index in 0..<filteredSections.count {
+            switch filteredSections[index] {
             case .car:
-                sections.remove(at: index)
-                sections.append(.car(models: filteredCars))
+                filteredSections.remove(at: index)
+                filteredSections.append(.car(models: filteredCars))
             default:
                 break
             }
         }
-        return self.sections
+        
+        return filteredSections
+    }
+    
+    func getFilters(type: FilterType) -> [FilterItem] {
+        // returns an array of FilterItems used for FilterCell
+        switch type {
+        case .model:
+            return self.filtersModel
+        case .make:
+            return self.filtersMake
+        }
+    }
+    
+    private func setSelections(with cars: [CarItem]) {
+        self.cars = cars
+        self.sections.append(.car(models: cars))
+        self.filtersMake = cars.map({ FilterItem(text: $0.make, type: .make )})
+        self.filtersModel = cars.map({ FilterItem(text: $0.model, type: .model )})
     }
 }
