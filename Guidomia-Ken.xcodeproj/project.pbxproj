@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		99168DCA29749CB900B02FAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DC929749CB900B02FAC /* AppDelegate.swift */; };
 		99168DCC29749CB900B02FAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DCB29749CB900B02FAC /* SceneDelegate.swift */; };
-		99168DCE29749CB900B02FAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DCD29749CB900B02FAC /* ViewController.swift */; };
 		99168DD129749CB900B02FAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99168DCF29749CB900B02FAC /* Main.storyboard */; };
 		99168DD429749CB900B02FAC /* Guidomia_Ken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99168DD229749CB900B02FAC /* Guidomia_Ken.xcdatamodeld */; };
 		99168DD629749CBA00B02FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99168DD529749CBA00B02FAC /* Assets.xcassets */; };
@@ -17,6 +16,17 @@
 		99168DE429749CBA00B02FAC /* Guidomia_KenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DE329749CBA00B02FAC /* Guidomia_KenTests.swift */; };
 		99168DEE29749CBA00B02FAC /* Guidomia_KenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DED29749CBA00B02FAC /* Guidomia_KenUITests.swift */; };
 		99168DF029749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DEF29749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift */; };
+		99168E0129749E6000B02FAC /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168E0029749E6000B02FAC /* CarsViewController.swift */; };
+		99168E082974A3D900B02FAC /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168E072974A3D900B02FAC /* ImageCell.swift */; };
+		99168E0A2974A3EC00B02FAC /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99168E092974A3EC00B02FAC /* ImageCell.xib */; };
+		99168E0C2974A87600B02FAC /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168E0B2974A87600B02FAC /* CarsViewModel.swift */; };
+		991B6EE22974CF150062D0E5 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B6EE02974CF150062D0E5 /* HeaderCell.swift */; };
+		991B6EE32974CF150062D0E5 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B6EE12974CF150062D0E5 /* HeaderCell.xib */; };
+		991B6EE62974D5E40062D0E5 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B6EE42974D5E40062D0E5 /* CarCell.swift */; };
+		991B6EE72974D5E40062D0E5 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B6EE52974D5E40062D0E5 /* CarCell.xib */; };
+		99FF81782974E22400EA9A01 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF81772974E22400EA9A01 /* APIService.swift */; };
+		99FF817D2974E37D00EA9A01 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF817C2974E37D00EA9A01 /* Car.swift */; };
+		99FF817F2974EC8B00EA9A01 /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 99FF817E2974EBAB00EA9A01 /* car_list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +50,6 @@
 		99168DC629749CB900B02FAC /* Guidomia-Ken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guidomia-Ken.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99168DC929749CB900B02FAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99168DCB29749CB900B02FAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99168DCD29749CB900B02FAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99168DD029749CB900B02FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99168DD329749CB900B02FAC /* Guidomia_Ken.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guidomia_Ken.xcdatamodel; sourceTree = "<group>"; };
 		99168DD529749CBA00B02FAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +60,17 @@
 		99168DE929749CBA00B02FAC /* Guidomia-KenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guidomia-KenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99168DED29749CBA00B02FAC /* Guidomia_KenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidomia_KenUITests.swift; sourceTree = "<group>"; };
 		99168DEF29749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidomia_KenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		99168E0029749E6000B02FAC /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
+		99168E072974A3D900B02FAC /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		99168E092974A3EC00B02FAC /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		99168E0B2974A87600B02FAC /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		991B6EE02974CF150062D0E5 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		991B6EE12974CF150062D0E5 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		991B6EE42974D5E40062D0E5 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		991B6EE52974D5E40062D0E5 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
+		99FF81772974E22400EA9A01 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		99FF817C2974E37D00EA9A01 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		99FF817E2974EBAB00EA9A01 /* car_list.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +121,11 @@
 		99168DC829749CB900B02FAC /* Guidomia-Ken */ = {
 			isa = PBXGroup;
 			children = (
+				99168E062974A28C00B02FAC /* Helpers */,
+				99168DFF29749E4600B02FAC /* CarsModule */,
 				99168DC929749CB900B02FAC /* AppDelegate.swift */,
 				99168DCB29749CB900B02FAC /* SceneDelegate.swift */,
-				99168DCD29749CB900B02FAC /* ViewController.swift */,
 				99168DCF29749CB900B02FAC /* Main.storyboard */,
-				99168DD529749CBA00B02FAC /* Assets.xcassets */,
 				99168DD729749CBA00B02FAC /* LaunchScreen.storyboard */,
 				99168DDA29749CBA00B02FAC /* Info.plist */,
 				99168DD229749CB900B02FAC /* Guidomia_Ken.xcdatamodeld */,
@@ -128,6 +148,80 @@
 				99168DEF29749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift */,
 			);
 			path = "Guidomia-KenUITests";
+			sourceTree = "<group>";
+		};
+		99168DFF29749E4600B02FAC /* CarsModule */ = {
+			isa = PBXGroup;
+			children = (
+				99FF817B2974E30D00EA9A01 /* Models */,
+				99FF81762974DEE300EA9A01 /* Services */,
+				99168E052974A0B000B02FAC /* Resources */,
+				99168E0429749F6600B02FAC /* Views */,
+				99168E0329749F5200B02FAC /* ViewModels */,
+				99168E0229749F3B00B02FAC /* ViewControllers */,
+			);
+			path = CarsModule;
+			sourceTree = "<group>";
+		};
+		99168E0229749F3B00B02FAC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				99168E0029749E6000B02FAC /* CarsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		99168E0329749F5200B02FAC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				99168E0B2974A87600B02FAC /* CarsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		99168E0429749F6600B02FAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				991B6EE42974D5E40062D0E5 /* CarCell.swift */,
+				991B6EE52974D5E40062D0E5 /* CarCell.xib */,
+				99168E072974A3D900B02FAC /* ImageCell.swift */,
+				99168E092974A3EC00B02FAC /* ImageCell.xib */,
+				991B6EE02974CF150062D0E5 /* HeaderCell.swift */,
+				991B6EE12974CF150062D0E5 /* HeaderCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99168E052974A0B000B02FAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99168DD529749CBA00B02FAC /* Assets.xcassets */,
+				99FF817E2974EBAB00EA9A01 /* car_list.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		99168E062974A28C00B02FAC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		99FF81762974DEE300EA9A01 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				99FF81772974E22400EA9A01 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		99FF817B2974E30D00EA9A01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99FF817C2974E37D00EA9A01 /* Car.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +328,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991B6EE32974CF150062D0E5 /* HeaderCell.xib in Resources */,
 				99168DD929749CBA00B02FAC /* LaunchScreen.storyboard in Resources */,
+				99FF817F2974EC8B00EA9A01 /* car_list.json in Resources */,
+				99168E0A2974A3EC00B02FAC /* ImageCell.xib in Resources */,
 				99168DD629749CBA00B02FAC /* Assets.xcassets in Resources */,
+				991B6EE72974D5E40062D0E5 /* CarCell.xib in Resources */,
 				99168DD129749CB900B02FAC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,10 +359,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99168DCE29749CB900B02FAC /* ViewController.swift in Sources */,
+				99FF81782974E22400EA9A01 /* APIService.swift in Sources */,
 				99168DD429749CB900B02FAC /* Guidomia_Ken.xcdatamodeld in Sources */,
+				99FF817D2974E37D00EA9A01 /* Car.swift in Sources */,
+				99168E0C2974A87600B02FAC /* CarsViewModel.swift in Sources */,
+				99168E0129749E6000B02FAC /* CarsViewController.swift in Sources */,
 				99168DCA29749CB900B02FAC /* AppDelegate.swift in Sources */,
 				99168DCC29749CB900B02FAC /* SceneDelegate.swift in Sources */,
+				99168E082974A3D900B02FAC /* ImageCell.swift in Sources */,
+				991B6EE62974D5E40062D0E5 /* CarCell.swift in Sources */,
+				991B6EE22974CF150062D0E5 /* HeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
