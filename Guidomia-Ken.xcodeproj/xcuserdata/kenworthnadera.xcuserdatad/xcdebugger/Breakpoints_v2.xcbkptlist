@@ -7,17 +7,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B5F1C4D0-D948-4BFD-889C-1F539BB0F50C"
+            uuid = "DFABDA24-0CB3-4E16-8B30-2C171D725293"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Guidomia-Ken/CarsModule/Views/FilterCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "awakeFromNib()"
-            landmarkType = "7">
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "DFABDA24-0CB3-4E16-8B30-2C171D725293 - f9b97f46b4f807dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Guidomia_Ken.FilterCell.configureFilter(with: Swift.Array&lt;Guidomia_Ken.FilterItem&gt;, models: Swift.Array&lt;Guidomia_Ken.FilterItem&gt;) -&gt; ()"
+                  moduleName = "Guidomia-Ken"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenworthnadera/Desktop/Bell-sample/Guidomia-Ken/Guidomia-Ken/CarsModule/Views/FilterCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "DFABDA24-0CB3-4E16-8B30-2C171D725293 - 37d8bd6a9f3ea45b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Guidomia_Ken.FilterItem) -&gt; Swift.String in Guidomia_Ken.FilterCell.configureFilter(with: Swift.Array&lt;Guidomia_Ken.FilterItem&gt;, models: Swift.Array&lt;Guidomia_Ken.FilterItem&gt;) -&gt; ()"
+                  moduleName = "Guidomia-Ken"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenworthnadera/Desktop/Bell-sample/Guidomia-Ken/Guidomia-Ken/CarsModule/Views/FilterCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "610D8C78-21FF-44C0-8FFB-1BCB377B05FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Guidomia-Ken/CarsModule/Views/FilterCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" rowHeight="181" id="KGk-i7-Jjw" customClass="FilterCell" customModule="Guidomia_Ken" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="181"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="181"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JS4-k0-icy">
+                        <rect key="frame" x="20" y="20" width="368" height="141"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDH-Gw-kNK">
+                                <rect key="frame" x="19" y="11" width="339" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Any Make" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-bA-ZgP" customClass="DropDown" customModule="Guidomia_Ken" customModuleProvider="target">
+                                <rect key="frame" x="19" y="40" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Any Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIh-uK-lcy" customClass="DropDown" customModule="Guidomia_Ken" customModuleProvider="target">
+                                <rect key="frame" x="19" y="82" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QIh-uK-lcy" secondAttribute="trailing" constant="15" id="2mQ-fi-XyL"/>
+                            <constraint firstAttribute="trailing" secondItem="a9M-bA-ZgP" secondAttribute="trailing" constant="15" id="BdZ-zl-zEV"/>
+                            <constraint firstItem="a9M-bA-ZgP" firstAttribute="top" secondItem="sDH-Gw-kNK" secondAttribute="bottom" constant="6" id="CoY-wB-GQG"/>
+                            <constraint firstAttribute="trailing" secondItem="sDH-Gw-kNK" secondAttribute="trailing" constant="10" id="G2l-KM-QXe"/>
+                            <constraint firstItem="sDH-Gw-kNK" firstAttribute="leading" secondItem="JS4-k0-icy" secondAttribute="leading" constant="19" id="O2e-av-Gmw"/>
+                            <constraint firstItem="QIh-uK-lcy" firstAttribute="leading" secondItem="JS4-k0-icy" secondAttribute="leading" constant="19" id="SkU-p6-rP6"/>
+                            <constraint firstItem="a9M-bA-ZgP" firstAttribute="leading" secondItem="JS4-k0-icy" secondAttribute="leading" constant="19" id="hMK-h1-jft"/>
+                            <constraint firstItem="sDH-Gw-kNK" firstAttribute="top" secondItem="JS4-k0-icy" secondAttribute="top" constant="11" id="lX7-hv-IuW"/>
+                            <constraint firstAttribute="bottom" secondItem="QIh-uK-lcy" secondAttribute="bottom" constant="25" id="mEf-9b-lp3"/>
+                            <constraint firstItem="QIh-uK-lcy" firstAttribute="top" secondItem="a9M-bA-ZgP" secondAttribute="bottom" constant="8" symbolic="YES" id="n9z-YJ-dRF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JS4-k0-icy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="GaZ-WQ-Bdn"/>
+                    <constraint firstAttribute="bottom" secondItem="JS4-k0-icy" secondAttribute="bottom" constant="20" id="TiG-R2-t0l"/>
+                    <constraint firstAttribute="trailing" secondItem="JS4-k0-icy" secondAttribute="trailing" constant="20" id="dQL-LW-Hfz"/>
+                    <constraint firstItem="JS4-k0-icy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="q4H-LX-jEp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textfieldMake" destination="a9M-bA-ZgP" id="zcl-oY-dXF"/>
+                <outlet property="textfieldModel" destination="QIh-uK-lcy" id="c89-Tb-XBk"/>
+            </connections>
+            <point key="canvasLocation" x="160.30534351145039" y="68.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

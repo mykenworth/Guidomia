@@ -10,6 +10,7 @@ import UIKit
 
 enum SectionTypes {
     case header
+    case filter
     case image
     case car(models: [Car])
 }
@@ -17,16 +18,16 @@ enum SectionTypes {
 class CarsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var sections: [SectionTypes] = []
-    var selectedIndexPath = IndexPath(row: 0, section: 2) // default selected per requirement (1st car item)
+    var selectedIndexPath = IndexPath(row: 0, section: 3) // default selected per requirement (1st car item)
     
     private var vm = CarsViewModel(databaseService: APIService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let identifiers: [String] =  ["HeaderCell", "ImageCell", "CarCell"]
-        identifiers.forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
-                                                 forCellReuseIdentifier: $0) })
-        sections = vm.getItems()
+        
+        ["HeaderCell", "FilterCell", "ImageCell", "CarCell"].forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
+                                                                                          forCellReuseIdentifier: $0) })
+        sections = vm.getUnfilteredSections()
         tableView.estimatedRowHeight = 120
     }
     
@@ -43,7 +44,7 @@ extension CarsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch sections[section] {
-        case .header, .image:
+        case .header, .image, .filter:
             return 1
         case .car(let model):
             return model.count
@@ -52,16 +53,21 @@ extension CarsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
-            case .header:
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else { return UITableViewCell() }
-                return cell
-            case .image:
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
-                return cell
-            case .car(let models):
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
-                cell.configure(car: models[indexPath.row], selected: indexPath == selectedIndexPath)
-                return cell
+        case .header:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else { return UITableViewCell() }
+            return cell
+        case .filter:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterCell", for: indexPath) as? FilterCell else { return UITableViewCell() }
+            cell.configureFilter(with: vm.getFilters(type: .make), models: vm.getFilters(type: .model))
+            cell.delegate = self
+            return cell
+        case .image:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
+            return cell
+        case .car(let models):
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
+            cell.configure(car: models[indexPath.row], selected: indexPath == selectedIndexPath)
+            return cell
         }
     }
 }
@@ -83,6 +89,14 @@ extension CarsViewController: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+}
+
+// MARK: FilterCellDelegate Methods
+extension CarsViewController: FilterCellDelegate {
+    func didSearch(filter: FilterItem) {
+        self.sections = vm.getFilteredSections(filter: filter)
+        self.tableView.reloadSections(IndexSet(integer: 3), with: .automatic)
     }
 }
 
