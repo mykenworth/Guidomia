@@ -26,6 +26,9 @@
 		991B6EE72974D5E40062D0E5 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B6EE52974D5E40062D0E5 /* CarCell.xib */; };
 		9967A3B52975C4C600D541EF /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B42975C4C600D541EF /* NSAttributedString+Extension.swift */; };
 		9967A3B72975C4EF00D541EF /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */; };
+		9967A3BA2975C99900D541EF /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B92975C99900D541EF /* DropDown.swift */; };
+		9967A3BD2975CB6D00D541EF /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3BB2975CB6D00D541EF /* FilterCell.swift */; };
+		9967A3BE2975CB6D00D541EF /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9967A3BC2975CB6D00D541EF /* FilterCell.xib */; };
 		99FF81782974E22400EA9A01 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF81772974E22400EA9A01 /* APIService.swift */; };
 		99FF817D2974E37D00EA9A01 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF817C2974E37D00EA9A01 /* Car.swift */; };
 		99FF817F2974EC8B00EA9A01 /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 99FF817E2974EBAB00EA9A01 /* car_list.json */; };
@@ -72,6 +75,9 @@
 		991B6EE52974D5E40062D0E5 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
 		9967A3B42975C4C600D541EF /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
 		9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		9967A3B92975C99900D541EF /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
+		9967A3BB2975CB6D00D541EF /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		9967A3BC2975CB6D00D541EF /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		99FF81772974E22400EA9A01 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		99FF817C2974E37D00EA9A01 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		99FF817E2974EBAB00EA9A01 /* car_list.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
@@ -157,6 +163,7 @@
 		99168DFF29749E4600B02FAC /* CarsModule */ = {
 			isa = PBXGroup;
 			children = (
+				9967A3B82975C98600D541EF /* Libraries */,
 				9967A3B32975C4A100D541EF /* Extensions */,
 				99FF817B2974E30D00EA9A01 /* Models */,
 				99FF81762974DEE300EA9A01 /* Services */,
@@ -193,6 +200,8 @@
 				99168E092974A3EC00B02FAC /* ImageCell.xib */,
 				991B6EE02974CF150062D0E5 /* HeaderCell.swift */,
 				991B6EE12974CF150062D0E5 /* HeaderCell.xib */,
+				9967A3BB2975CB6D00D541EF /* FilterCell.swift */,
+				9967A3BC2975CB6D00D541EF /* FilterCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +229,14 @@
 				9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9967A3B82975C98600D541EF /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9967A3B92975C99900D541EF /* DropDown.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		99FF81762974DEE300EA9A01 /* Services */ = {
@@ -347,6 +364,7 @@
 				99FF817F2974EC8B00EA9A01 /* car_list.json in Resources */,
 				99168E0A2974A3EC00B02FAC /* ImageCell.xib in Resources */,
 				99168DD629749CBA00B02FAC /* Assets.xcassets in Resources */,
+				9967A3BE2975CB6D00D541EF /* FilterCell.xib in Resources */,
 				991B6EE72974D5E40062D0E5 /* CarCell.xib in Resources */,
 				99168DD129749CB900B02FAC /* Main.storyboard in Resources */,
 			);
@@ -380,6 +398,8 @@
 				99168E0C2974A87600B02FAC /* CarsViewModel.swift in Sources */,
 				99168E0129749E6000B02FAC /* CarsViewController.swift in Sources */,
 				99168DCA29749CB900B02FAC /* AppDelegate.swift in Sources */,
+				9967A3BD2975CB6D00D541EF /* FilterCell.swift in Sources */,
+				9967A3BA2975C99900D541EF /* DropDown.swift in Sources */,
 				9967A3B72975C4EF00D541EF /* UITableViewCell+Extension.swift in Sources */,
 				99168DCC29749CB900B02FAC /* SceneDelegate.swift in Sources */,
 				99168E082974A3D900B02FAC /* ImageCell.swift in Sources */,
