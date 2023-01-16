@@ -17,6 +17,7 @@ enum SectionTypes {
 class CarsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var sections: [SectionTypes] = []
+    var selectedIndexPath = IndexPath(row: 0, section: 2) // default selected per requirement (1st car item)
     
     private var vm = CarsViewModel(databaseService: APIService())
     
@@ -26,6 +27,7 @@ class CarsViewController: UIViewController {
         identifiers.forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
                                                  forCellReuseIdentifier: $0) })
         sections = vm.getItems()
+        tableView.estimatedRowHeight = 120
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +60,7 @@ extension CarsViewController: UITableViewDataSource {
                 return cell
             case .car(let models):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
-                cell.configure(car: models[indexPath.row])
+                cell.configure(car: models[indexPath.row], selected: indexPath == selectedIndexPath)
                 return cell
         }
     }
@@ -68,6 +70,7 @@ extension CarsViewController: UITableViewDataSource {
 // MARK : TableView Delegate Methods
 extension CarsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndexPath = indexPath
         tableView.reloadData()
     }
     
@@ -77,8 +80,6 @@ extension CarsViewController: UITableViewDelegate {
             return 45
         case .image:
             return 250
-        case .car:
-            return 90
         default:
             return UITableView.automaticDimension
         }
