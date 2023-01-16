@@ -8,13 +8,24 @@
 import Foundation
 
 class CarsViewModel {
-    private var sections: [CarsVCSectionTypes] = []
+    private let databaseService: APIService
+    private var sections: [SectionTypes] = []
     
-    init() {
-        sections.append(contentsOf: [.header, .image, .car, .car, .car, .car, .car, .car, .car])
+    init(databaseService: APIService) {
+        self.databaseService = databaseService
+        sections.append(contentsOf: [.header, .image])
     }
     
-    func getItems() -> [CarsVCSectionTypes] {
-        return sections
+    func getItems() -> [SectionTypes] {
+        databaseService.getCars { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let cars):
+                self.sections.append(.car(models: cars))
+            case .failure(let error):
+                debugPrint(error.localizedDescription)
+            }
+        }
+        return self.sections
     }
 }

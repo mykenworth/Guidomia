@@ -8,17 +8,17 @@
 import Foundation
 import UIKit
 
-enum CarsVCSectionTypes {
+enum SectionTypes {
     case header
     case image
-    case car
+    case car(models: [Car])
 }
 
 class CarsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var sections: [CarsVCSectionTypes] = []
+    var sections: [SectionTypes] = []
     
-    private var vm = CarsViewModel()
+    private var vm = CarsViewModel(databaseService: APIService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,10 @@ extension CarsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch sections[section] {
-        case .header, .image, .car:
+        case .header, .image:
             return 1
+        case .car(let model):
+            return model.count
         }
     }
     
@@ -54,8 +56,9 @@ extension CarsViewController: UITableViewDataSource {
             case .image:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
                 return cell
-            case .car:
+            case .car(let models):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
+                cell.configure(car: models[indexPath.row])
                 return cell
         }
     }

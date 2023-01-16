@@ -20,8 +20,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xu-Pu-T5y">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="77"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Range_Rover" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-8f-ljO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Range Rover" translatesAutoresizingMaskIntoConstraints="NO" id="JKe-8f-ljO">
                                 <rect key="frame" x="16" y="11.999999999999996" width="79.333333333333329" height="44.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79.329999999999998" id="99G-gp-0Vk"/>
+                                    <constraint firstAttribute="height" constant="44.670000000000002" id="hHQ-dW-Iwh"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W5N-Co-u83">
                                 <rect key="frame" x="108" y="9" width="236" height="57"/>
@@ -75,11 +79,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageThumb" destination="JKe-8f-ljO" id="gvZ-ZD-rIl"/>
+                <outlet property="labelPrice" destination="ijQ-nW-sRq" id="5e9-X6-pbh"/>
+                <outlet property="labelRating" destination="ySF-4T-bhw" id="MzT-Pt-vK2"/>
+                <outlet property="labelTitle" destination="zgn-ra-s9f" id="ihW-GL-fU6"/>
+            </connections>
             <point key="canvasLocation" x="146.56488549618319" y="24.647887323943664"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Range_Rover" width="79.333335876464844" height="44.666667938232422"/>
+        <image name="Range Rover" width="238" height="134"/>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
