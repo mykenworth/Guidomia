@@ -26,6 +26,7 @@ class CarsViewController: UIViewController {
         identifiers.forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
                                                  forCellReuseIdentifier: $0) })
         sections = vm.getItems()
+        tableView.estimatedRowHeight = 120
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,13 +53,16 @@ extension CarsViewController: UITableViewDataSource {
         switch sections[indexPath.section] {
             case .header:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell else { return UITableViewCell() }
+                cell.hideSeparator()
                 return cell
             case .image:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else { return UITableViewCell() }
+                cell.hideSeparator()
                 return cell
             case .car(let models):
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "CarCell", for: indexPath) as? CarCell else { return UITableViewCell() }
                 cell.configure(car: models[indexPath.row])
+                cell.showSeparator()
                 return cell
         }
     }
@@ -77,8 +81,8 @@ extension CarsViewController: UITableViewDelegate {
             return 45
         case .image:
             return 250
-        case .car:
-            return 90
+//        case .car:
+//            return 90 //90
         default:
             return UITableView.automaticDimension
         }
