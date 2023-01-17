@@ -13,7 +13,6 @@
 		99168DD429749CB900B02FAC /* Guidomia_Ken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99168DD229749CB900B02FAC /* Guidomia_Ken.xcdatamodeld */; };
 		99168DD629749CBA00B02FAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99168DD529749CBA00B02FAC /* Assets.xcassets */; };
 		99168DD929749CBA00B02FAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99168DD729749CBA00B02FAC /* LaunchScreen.storyboard */; };
-		99168DE429749CBA00B02FAC /* Guidomia_KenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DE329749CBA00B02FAC /* Guidomia_KenTests.swift */; };
 		99168DEE29749CBA00B02FAC /* Guidomia_KenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DED29749CBA00B02FAC /* Guidomia_KenUITests.swift */; };
 		99168DF029749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168DEF29749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift */; };
 		99168E0129749E6000B02FAC /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99168E0029749E6000B02FAC /* CarsViewController.swift */; };
@@ -28,6 +27,8 @@
 		994A2B3329760F4B0007C9DA /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B3229760F4B0007C9DA /* UITableViewCell+Extensions.swift */; };
 		994A2B3529760F6F0007C9DA /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B3429760F6F0007C9DA /* NSAttributedString+Extensions.swift */; };
 		994A2B37297610B10007C9DA /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B36297610B10007C9DA /* FilterItem.swift */; };
+		994A2B39297624170007C9DA /* CarsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B38297624170007C9DA /* CarsViewModelTests.swift */; };
+		994A2B3C297637620007C9DA /* DatabaseServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B3B297637620007C9DA /* DatabaseServiceMock.swift */; };
 		9967A3BA2975C99900D541EF /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B92975C99900D541EF /* DropDown.swift */; };
 		9967A3BD2975CB6D00D541EF /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3BB2975CB6D00D541EF /* FilterCell.swift */; };
 		9967A3BE2975CB6D00D541EF /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9967A3BC2975CB6D00D541EF /* FilterCell.xib */; };
@@ -63,7 +64,6 @@
 		99168DD829749CBA00B02FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99168DDA29749CBA00B02FAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99168DDF29749CBA00B02FAC /* Guidomia-KenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guidomia-KenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		99168DE329749CBA00B02FAC /* Guidomia_KenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidomia_KenTests.swift; sourceTree = "<group>"; };
 		99168DE929749CBA00B02FAC /* Guidomia-KenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guidomia-KenUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99168DED29749CBA00B02FAC /* Guidomia_KenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidomia_KenUITests.swift; sourceTree = "<group>"; };
 		99168DEF29749CBA00B02FAC /* Guidomia_KenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidomia_KenUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		994A2B3229760F4B0007C9DA /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		994A2B3429760F6F0007C9DA /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		994A2B36297610B10007C9DA /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
+		994A2B38297624170007C9DA /* CarsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModelTests.swift; sourceTree = "<group>"; };
+		994A2B3B297637620007C9DA /* DatabaseServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceMock.swift; sourceTree = "<group>"; };
 		9967A3B92975C99900D541EF /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		9967A3BB2975CB6D00D541EF /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		9967A3BC2975CB6D00D541EF /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
@@ -150,7 +152,8 @@
 		99168DE229749CBA00B02FAC /* Guidomia-KenTests */ = {
 			isa = PBXGroup;
 			children = (
-				99168DE329749CBA00B02FAC /* Guidomia_KenTests.swift */,
+				994A2B3A297637490007C9DA /* Mocks */,
+				994A2B38297624170007C9DA /* CarsViewModelTests.swift */,
 			);
 			path = "Guidomia-KenTests";
 			sourceTree = "<group>";
@@ -224,6 +227,14 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		994A2B3A297637490007C9DA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				994A2B3B297637620007C9DA /* DatabaseServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		9967A3B32975C4A100D541EF /* Extensions */ = {
@@ -420,7 +431,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99168DE429749CBA00B02FAC /* Guidomia_KenTests.swift in Sources */,
+				994A2B39297624170007C9DA /* CarsViewModelTests.swift in Sources */,
+				994A2B3C297637620007C9DA /* DatabaseServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
