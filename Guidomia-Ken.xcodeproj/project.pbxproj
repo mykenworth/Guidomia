@@ -137,7 +137,8 @@
 		99168DC829749CB900B02FAC /* Guidomia-Ken */ = {
 			isa = PBXGroup;
 			children = (
-				99168E062974A28C00B02FAC /* Helpers */,
+				9967A3B32975C4A100D541EF /* Extensions */,
+				99FF81762974DEE300EA9A01 /* Services */,
 				99168DFF29749E4600B02FAC /* CarsModule */,
 				99168DC929749CB900B02FAC /* AppDelegate.swift */,
 				99168DCB29749CB900B02FAC /* SceneDelegate.swift */,
@@ -171,9 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9967A3B82975C98600D541EF /* Libraries */,
-				9967A3B32975C4A100D541EF /* Extensions */,
 				99FF817B2974E30D00EA9A01 /* Models */,
-				99FF81762974DEE300EA9A01 /* Services */,
 				99168E052974A0B000B02FAC /* Resources */,
 				99168E0429749F6600B02FAC /* Views */,
 				99168E0329749F5200B02FAC /* ViewModels */,
@@ -220,13 +219,6 @@
 				99FF817E2974EBAB00EA9A01 /* car_list.json */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		99168E062974A28C00B02FAC /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		994A2B3A297637490007C9DA /* Mocks */ = {
