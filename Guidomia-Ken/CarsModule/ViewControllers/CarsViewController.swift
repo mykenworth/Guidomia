@@ -8,27 +8,23 @@
 import Foundation
 import UIKit
 
-enum SectionTypes {
-    case header
-    case filter
-    case image
-    case car(models: [Car])
-}
-
 class CarsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var sections: [SectionTypes] = []
-    var selectedIndexPath = IndexPath(row: 0, section: 3) // default selected per requirement (1st car item)
     
-    private var vm = CarsViewModel(databaseService: APIService())
+    private var sections: [SectionType] = []
+    
+    // default selected per requirement (1st car item)
+    private var selectedIndexPath = IndexPath(row: 0, section: 3)
+    
+    private var viewModel = CarsViewModel(databaseService: DatabaseService())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ["HeaderCell", "FilterCell", "ImageCell", "CarCell"].forEach({ tableView.register(UINib(nibName: $0, bundle: nil),
-                                                                                          forCellReuseIdentifier: $0) })
-        sections = vm.getUnfilteredSections()
-        tableView.estimatedRowHeight = 120
+        ["HeaderCell", "FilterCell", "ImageCell", "CarCell"].forEach({ tableView.register(UINib(nibName: $0, bundle: nil), forCellReuseIdentifier: $0) })
+        
+        // load the tableView dataSource
+        sections = viewModel.getUnfilteredSections()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +32,7 @@ class CarsViewController: UIViewController {
     }
 }
 
-// MARK : TableView DataSource Methods
+// MARK: TableView DataSource Methods
 extension CarsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -58,7 +54,7 @@ extension CarsViewController: UITableViewDataSource {
             return cell
         case .filter:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterCell", for: indexPath) as? FilterCell else { return UITableViewCell() }
-            cell.configureFilter(with: vm.getFilters(type: .make), models: vm.getFilters(type: .model))
+            cell.configureFilter(with: viewModel.getFilters(type: .make), models: viewModel.getFilters(type: .model))
             cell.delegate = self
             return cell
         case .image:
@@ -72,12 +68,11 @@ extension CarsViewController: UITableViewDataSource {
     }
 }
 
-
-// MARK : TableView Delegate Methods
+// MARK: TableView Delegate Methods
 extension CarsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndexPath = indexPath
-        tableView.reloadData()
+        self.tableView.reloadSections(IndexSet(integer: selectedIndexPath.section), with: .automatic)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -95,8 +90,8 @@ extension CarsViewController: UITableViewDelegate {
 // MARK: FilterCellDelegate Methods
 extension CarsViewController: FilterCellDelegate {
     func didSearch(filter: FilterItem) {
-        self.sections = vm.getFilteredSections(filter: filter)
-        self.tableView.reloadSections(IndexSet(integer: 3), with: .automatic)
+        self.sections = viewModel.getFilteredSections(filter: filter)
+        self.tableView.reloadSections(IndexSet(integer: selectedIndexPath.section), with: .automatic)
     }
 }
 

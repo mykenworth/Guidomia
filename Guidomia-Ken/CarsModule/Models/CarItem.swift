@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Car: Codable {
+struct CarItem: Codable {
     var consList: [String]
     var customerPrice: Double
     var make: String

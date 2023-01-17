@@ -7,16 +7,6 @@
 
 import UIKit
 
-struct FilterItem {
-    let text: String
-    let type: FilterType
-}
-
-enum FilterType {
-    case model
-    case make
-}
-
 protocol FilterCellDelegate: AnyObject {
     func didSearch(filter: FilterItem)
 }

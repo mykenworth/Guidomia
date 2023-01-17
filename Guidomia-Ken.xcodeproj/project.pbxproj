@@ -24,13 +24,15 @@
 		991B6EE32974CF150062D0E5 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B6EE12974CF150062D0E5 /* HeaderCell.xib */; };
 		991B6EE62974D5E40062D0E5 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B6EE42974D5E40062D0E5 /* CarCell.swift */; };
 		991B6EE72974D5E40062D0E5 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 991B6EE52974D5E40062D0E5 /* CarCell.xib */; };
-		9967A3B52975C4C600D541EF /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B42975C4C600D541EF /* NSAttributedString+Extension.swift */; };
-		9967A3B72975C4EF00D541EF /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */; };
+		994A2B31297608920007C9DA /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B30297608920007C9DA /* SectionType.swift */; };
+		994A2B3329760F4B0007C9DA /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B3229760F4B0007C9DA /* UITableViewCell+Extensions.swift */; };
+		994A2B3529760F6F0007C9DA /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B3429760F6F0007C9DA /* NSAttributedString+Extensions.swift */; };
+		994A2B37297610B10007C9DA /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A2B36297610B10007C9DA /* FilterItem.swift */; };
 		9967A3BA2975C99900D541EF /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3B92975C99900D541EF /* DropDown.swift */; };
 		9967A3BD2975CB6D00D541EF /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9967A3BB2975CB6D00D541EF /* FilterCell.swift */; };
 		9967A3BE2975CB6D00D541EF /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9967A3BC2975CB6D00D541EF /* FilterCell.xib */; };
-		99FF81782974E22400EA9A01 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF81772974E22400EA9A01 /* APIService.swift */; };
-		99FF817D2974E37D00EA9A01 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF817C2974E37D00EA9A01 /* Car.swift */; };
+		99FF81782974E22400EA9A01 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF81772974E22400EA9A01 /* DatabaseService.swift */; };
+		99FF817D2974E37D00EA9A01 /* CarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF817C2974E37D00EA9A01 /* CarItem.swift */; };
 		99FF817F2974EC8B00EA9A01 /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 99FF817E2974EBAB00EA9A01 /* car_list.json */; };
 /* End PBXBuildFile section */
 
@@ -73,13 +75,15 @@
 		991B6EE12974CF150062D0E5 /* HeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		991B6EE42974D5E40062D0E5 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		991B6EE52974D5E40062D0E5 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
-		9967A3B42975C4C600D541EF /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
-		9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		994A2B30297608920007C9DA /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		994A2B3229760F4B0007C9DA /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		994A2B3429760F6F0007C9DA /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		994A2B36297610B10007C9DA /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		9967A3B92975C99900D541EF /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
 		9967A3BB2975CB6D00D541EF /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		9967A3BC2975CB6D00D541EF /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
-		99FF81772974E22400EA9A01 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		99FF817C2974E37D00EA9A01 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		99FF81772974E22400EA9A01 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		99FF817C2974E37D00EA9A01 /* CarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarItem.swift; sourceTree = "<group>"; };
 		99FF817E2974EBAB00EA9A01 /* car_list.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,8 +229,8 @@
 		9967A3B32975C4A100D541EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9967A3B42975C4C600D541EF /* NSAttributedString+Extension.swift */,
-				9967A3B62975C4EF00D541EF /* UITableViewCell+Extension.swift */,
+				994A2B3229760F4B0007C9DA /* UITableViewCell+Extensions.swift */,
+				994A2B3429760F6F0007C9DA /* NSAttributedString+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,7 +246,7 @@
 		99FF81762974DEE300EA9A01 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				99FF81772974E22400EA9A01 /* APIService.swift */,
+				99FF81772974E22400EA9A01 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -250,7 +254,9 @@
 		99FF817B2974E30D00EA9A01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				99FF817C2974E37D00EA9A01 /* Car.swift */,
+				99FF817C2974E37D00EA9A01 /* CarItem.swift */,
+				994A2B30297608920007C9DA /* SectionType.swift */,
+				994A2B36297610B10007C9DA /* FilterItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,19 +397,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FF81782974E22400EA9A01 /* APIService.swift in Sources */,
+				994A2B37297610B10007C9DA /* FilterItem.swift in Sources */,
+				99FF81782974E22400EA9A01 /* DatabaseService.swift in Sources */,
+				994A2B3529760F6F0007C9DA /* NSAttributedString+Extensions.swift in Sources */,
 				99168DD429749CB900B02FAC /* Guidomia_Ken.xcdatamodeld in Sources */,
-				9967A3B52975C4C600D541EF /* NSAttributedString+Extension.swift in Sources */,
-				99FF817D2974E37D00EA9A01 /* Car.swift in Sources */,
+				99FF817D2974E37D00EA9A01 /* CarItem.swift in Sources */,
 				99168E0C2974A87600B02FAC /* CarsViewModel.swift in Sources */,
 				99168E0129749E6000B02FAC /* CarsViewController.swift in Sources */,
 				99168DCA29749CB900B02FAC /* AppDelegate.swift in Sources */,
 				9967A3BD2975CB6D00D541EF /* FilterCell.swift in Sources */,
 				9967A3BA2975C99900D541EF /* DropDown.swift in Sources */,
-				9967A3B72975C4EF00D541EF /* UITableViewCell+Extension.swift in Sources */,
 				99168DCC29749CB900B02FAC /* SceneDelegate.swift in Sources */,
+				994A2B31297608920007C9DA /* SectionType.swift in Sources */,
 				99168E082974A3D900B02FAC /* ImageCell.swift in Sources */,
 				991B6EE62974D5E40062D0E5 /* CarCell.swift in Sources */,
+				994A2B3329760F4B0007C9DA /* UITableViewCell+Extensions.swift in Sources */,
 				991B6EE22974CF150062D0E5 /* HeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
